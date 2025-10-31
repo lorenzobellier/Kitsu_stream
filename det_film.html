@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Détail du film</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Inclure Font Awesome pour les icônes -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/style.css">
+
+</head>
+<body class="body_det_film">
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="public/logo_kitsu_stream-sombre.jpg" class="img_navbar" alt="logo" id="logo">
+      </a>
+
+      <!-- Burger menu -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="films.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="liste_acteurs.html">Acteurs</a></li>
+          <li class="nav-item"><a class="nav-link" href="serie.html">Séries</a></li>
+          <li class="nav-item"><a class="nav-link" href="wishlist.html">WishList</a></li>
+        </ul>
+        <div class="d-flex align-items-center ms-auto">
+          <!-- Switch de thème -->
+          <button id="theme-toggle" class="theme-toggle-btn nav-link" aria-label="Changer de thème">
+            <i class="fas fa-moon dark-icon"></i>
+            <i class="fas fa-sun light-icon" style="display: none;"></i>
+          </button>
+
+          <!-- Bouton Déconnexion -->
+          <div class="btn-login_nav">
+            <a href="#" class="H-connecter" id="logoutBtn2">Déconnexion</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="container det_film-container">
+  <div class="row">
+    <div class="col-12 col-md-4 position-relative">
+      <img id="movie-image" class="det_film-poster" src="" alt="Affiche du film" />
+    </div>
+    <div class="col-12 col-md-8">
+      <h2 id="det_film-title" class="mb-3 det_f-title"></h2>
+      <p><strong class="det_film-info-label">Genre :</strong> <span id="genre"></span></p>
+      <p><strong class="det_film-info-label">Durée :</strong> <span id="duration"></span></p>
+      <p><strong class="det_film-info-label">Date de sortie :</strong> <span id="release-date"></span></p>
+      <p><strong class="det_film-info-label">Réalisé par :</strong> <span id="director"></span></p>
+      <p><strong class="det_film-info-label">Acteurs :</strong> <span id="actors"></span></p>
+      <p><strong class="det_film-info-label">Note :</strong> <span id="rating"></span></p>
+      <button id="det_film-play-btn" class="det_film-btn-play">Voir la Bande-annonce</button>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col">
+      <h4 class="det_f-synop">Synopsis</h4>
+      <p id="det_film-description" class="det_f-descrip"></p>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col">
+      <h4>Acteurs principaux</h4>
+      <div class="det_film-actor-carousel" id="det_film-actor-carousel"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Trailer -->
+<div class="modal fade" id="det_film-trailer-modal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0">
+        <div class="ratio ratio-16x9">
+          <iframe id="det_film-trailer" src="" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="src/js/auth_verif.js"></script> <!-- Gestion de l'authentification -->
+<script src="src/js/det_film.js"></script>
+<script src="src/js/toogle_color.js"></script>
+</body>
+</html>

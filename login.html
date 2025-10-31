@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Inclure Font Awesome pour les icônes -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+
+
+</head>
+<body class="body_login">
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="public/logo_kitsu_stream-sombre.jpg" class="img_navbar" alt="logo">
+            </a>
+
+            <!-- Burger menu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation links + mobile logout -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="films.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="liste_acteurs.html">Acteurs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="serie.html">Séries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="wishlist.html">WishList</a></li>
+                </ul>
+
+                <!-- Mobile: Logout button -->
+                <div class="btn-login_nav d-lg-none">
+                    <a href="" class="H-connecter">Se Connecter</a>
+                </div>
+            </div>
+
+            <!-- Desktop: Logout button -->
+            <div class="btn-login_nav d-none d-lg-block ms-auto">
+                <a href="" class="H-connecter">Se connecter</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="main_login">
+<div class="cont_login">
+    <h1>Connexion</h1>
+    <form id="loginForm">
+        <div class="container-fluid_input">
+            <div class="row">
+                <div class="col-12">
+        <label for="username" class="label-login">Nom d'utilisateur :</label>
+        <input type="text" class="input-login" id="username" required>
+                </div>
+                <div class="col-12">
+        <label for="password" class="label-login">Mot de passe :</label>
+        <input type="password" class="input-login" id="password" required>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-login">Se connecter</button>
+    </form>
+    <p id="errorMessage" style="color: red;"></p>
+
+</div>
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script type="module" src="/src/js/login.js"></script>
+<script src="src/js/toogle_color.js"></script>
+</body>
+</html>

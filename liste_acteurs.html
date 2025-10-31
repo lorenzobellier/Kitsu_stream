@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Acteurs</title>
+    <!-- Inclure Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Inclure Font Awesome pour les icônes -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body class="body_actors">
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="public/logo_kitsu_stream-sombre.jpg" class="img_navbar" alt="logo" id="logo">
+            </a>
+
+            <!-- Burger menu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="films.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="liste_acteurs.html">Acteurs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="serie.html">Séries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="wishlist.html">WishList</a></li>
+                </ul>
+                <div class="d-flex align-items-center ms-auto">
+                    <!-- Switch de thème -->
+                    <button id="theme-toggle" class="theme-toggle-btn nav-link" aria-label="Changer de thème">
+                        <i class="fas fa-moon dark-icon"></i>
+                        <i class="fas fa-sun light-icon" style="display: none;"></i>
+                    </button>
+
+                    <!-- Bouton Déconnexion -->
+                    <div class="btn-login_nav">
+                        <a href="#" class="H-connecter" id="logoutBtn2">Déconnexion</a>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container list_actors">
+    <h2 class="text-center mb-4">Liste des Acteurs</h2>
+
+    <!-- Champ de filtrage par nom -->
+    <input type="text" id="filterInput" class="form-control mb-4" placeholder="Filtrer par nom..." onkeyup="filterActors()">
+
+    <!-- Liste des acteurs -->
+    <div id="actorList" class="row">
+        <!-- Les acteurs seront ajoutés ici dynamiquement -->
+    </div>
+
+    <!-- Bouton "Afficher plus" -->
+    <button id="loadMoreBtn" class="btn btn-primary btn-block">Afficher plus</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script API TMDB -->
+<script src="src/js/auth_verif.js"></script> <!-- Gestion de l'authentification -->
+<script src="src/js/actors.js"></script>
+<script src="src/js/toogle_color.js"></script>
+
+</body>
+</html>

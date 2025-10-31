@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KitsuStream - Votre plateforme de streaming préférée</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Inclure Font Awesome pour les icônes -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body class="body_index">
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="public/logo_kitsu_stream-sombre.jpg" class="img_navbar" alt="logo">
+      </a>
+
+      <!-- Burger menu -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation links + mobile logout -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="films.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="liste_acteurs.html">Acteurs</a></li>
+          <li class="nav-item"><a class="nav-link" href="serie.html">Séries</a></li>
+          <li class="nav-item"><a class="nav-link" href="wishlist.html">WishList</a></li>
+        </ul>
+
+        <!-- Mobile: Logout button -->
+        <div class="btn-login_nav d-lg-none">
+          <a href="" class="H-connecter">Se Connecter</a>
+        </div>
+      </div>
+
+      <!-- Desktop: Logout button -->
+      <div class="btn-login_nav d-none d-lg-block ms-auto">
+        <a href="" class="H-connecter">Se Connecter</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section d-flex align-items-center">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 text-center">
+        <h1 class="display-5 fw-bold mb-4">Un monde de divertissement à portée de clic</h1>
+        <p class="lead mb-4">KitsuStream vous offre un accès illimité aux meilleurs films et séries du moment. Profitez d'une expérience de streaming inégalée avec une qualité HD et une interface intuitive.</p>
+        <a href="login.html"><button class="btn btn-danger
+        cta-button">Commencer</button></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Pourquoi choisir KitsuStream ?</h2>
+
+    <div class="row g-4">
+      <!-- Feature 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="feature-card p-4">
+          <div class="feature-icon mb-3">📺</div>
+          <h3 class="h5">Catalogue immense</h3>
+          <p>Des milliers de films et séries de tous genres, des classiques aux dernières sorties.</p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="feature-card p-4">
+          <div class="feature-icon mb-3">🚀</div>
+          <h3 class="h5">Haute qualité</h3>
+          <p>Profitez de vos contenus préférés en HD et 4K sans interruption ni publicité.</p>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="feature-card p-4">
+          <div class="feature-icon mb-3">📱</div>
+          <h3 class="h5">Multi-appareils</h3>
+          <p>Regardez où que vous soyez, sur smartphone, tablette, ordinateur ou smart TV.</p>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="feature-card p-4">
+          <div class="feature-icon mb-3">💾</div>
+          <h3 class="h5">Téléchargements</h3>
+          <p>Téléchargez vos films et séries pour les regarder hors ligne, partout.</p>
+        </div>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="feature-card p-4">
+          <div class="feature-icon mb-3">🔍</div>
+          <h3 class="h5">Recommandations</h3>
+          <p>Un algorithme intelligent qui vous suggère des contenus adaptés à vos goûts.</p>
+        </div>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="feature-card p-4">
+          <div class="feature-icon mb-3">🌐</div>
+          <h3 class="h5">Contenu international</h3>
+          <p>Des films et séries du monde entier, sous-titrés ou doublés en français.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4 bg-black">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-12">
+        <div class="mb-3">
+          <a href="#" class="footer-link mx-2">Conditions d'utilisation</a>
+          <a href="#" class="footer-link mx-2">Confidentialité</a>
+          <a href="#" class="footer-link mx-2">FAQ</a>
+          <a href="#" class="footer-link mx-2">Contact</a>
+        </div>
+        <p class="small">
+          &copy; 2025 KitsuStream. Tous droits réservés.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="src/js/toogle_color.js"></script>
+</body>
