@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    /* === Thème clair === */
+    --color-bg: #d9d2d2;
+    --color-text: #000000;
+    --color-primary: #e50914; /* Boutons principaux */
+    --color-primary-hover: #ffffff;
+    --color-on-primary-hover: #e50914;
+
+    --color-secondary: #ff4d4d; /* Boutons alternatifs */
+    --color-secondary-hover: #ff3333;
+
+    --color-link-nav: #000000;
+    --color-link-nav-hover: #0935e5;
+
+    --color-btn-log: #5d76de;
+    --color-btn-hover: #050505;
+
+    --color-input-bg: #f0f0f0;
+    --color-input-border: #ccc;
+    --color-input-text: #000;
+
+    --color-footer-link: #666666;
+    --color-footer-link-hover: #e50914;
+
+    --color-card-bg: #f7f7f7;
+    --color-border: #000000;
+
+    --color-overlay: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] {
+    /* === Thème sombre === */
+    --color-bg: #141414;
+    --color-text: #ffffff;
+    --color-primary: #e50914;
+    --color-primary-hover: #ffffff;
+    --color-on-primary-hover: #e50914;
+
+    --color-secondary: #ff4d4d;
+    --color-secondary-hover: #ff3333;
+
+    --color-link-nav: #ffffff;
+    --color-link-nav-hover: #ff3333;
+
+    --color-btn-log: #e50914;
+    --color-btn-hover: #ffffff;
+
+    --color-input-bg: #333;
+    --color-input-border: #444;
+    --color-input-border-focus: #666;
+    --color-input-text: #ffffff;
+
+    --color-footer-link: #aaaaaa;
+    --color-footer-link-hover: #ff4d4d;
+
+    --color-card-bg: #1a1a1a;
+    --color-card-hover-bg: #333;
+
+    --color-border: rgba(255, 255, 255, 0.5);
+    --color-overlay: rgba(0, 0, 0, 0.8);
+}
+
+body {
+    font-family: 'Winky Sans', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background: #141414;
+}
+
+/******************* Navbar ****************/
+
+/* ... partie :root et [data-theme="dark"] inchangée ... */
+
+body {
+    font-family: 'Winky Sans', sans-serif;
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    background: var(--color-bg);
+}
+
+/******************* Navbar ****************/
+
+.navbar {
+    background: var(--color-overlay);
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.navbar .d-flex.align-items-center {
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+.img_navbar {
+    width: 5rem;
+    height: 5rem;
+}
+
+.H-connecter {
+    color: var(--color-text);
+    background: var(--color-btn-log);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.H-connecter:hover {
+    background: var(--color-btn-hover);
+    color: var(--color-btn-log);
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link {
+    color: var(--color-link-nav) !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-link-nav-hover) !important;
+}
+
+.btn-login_nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .btn-login_nav {
+        margin-top: 0;
+    }
+    .H-connecter {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1028px) {
+    .btn-login_nav.d-lg-none {
+        display: none !important;
+    }
+
+    .btn-login_nav.d-lg-block {
+        text-align: right;
+    }
+}
+
+/* Conteneur des films de la wishlist */
+#wishlistContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Carte des films */
+.movie-item {
+    background-color: var(--color-card-bg);
+    border-radius: 10px;
+    padding: 10px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0px 4px 6px var(--color-border);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-item:hover {
+    transform: scale(1.05);
+}
+
+.movie-item img {
+    width: 100%;
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+/* Titre personnalisable */
+.movie-title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: var(--color-text);
+}
+
+/* Bouton croix */
+.remove-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: var(--color-overlay);
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px var(--color-border);
+    backdrop-filter: blur(4px);
+    transition: transform 0.2s ease, background 0.3s ease;
+    z-index: 10;
+}
+
+.remove-button img {
+    width: 25px;
+    height: 25px;
+    filter: drop-shadow(0 0 2px var(--color-text));
+}
+
+/* Lien retour */
+.H-retour {
+    margin-left: 15%;
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+h1 {
+    margin-top: 10%;
+    text-align: center;
+    color: var(--color-text);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .movie-item {
+        width: calc(33.333% - 20px);
+    }
+
+    .movie-item img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .movie-item {
+        width: calc(50% - 20px);
+    }
+
+    .movie-item img {
+        max-width: 250px;
+    }
+
+    .H-retour {
+        margin-left: 0%;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin-top: 10%;
+    }
+}
+
+@media (max-width: 500px) {
+    .movie-item {
+        width: 100%;
+    }
+
+    .H-retour {
+        font-size: 12px;
+    }
+}
+
+/* Style pour le bouton de changement de thème */
+.theme-toggle-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    padding: 8px;
+}
+
+.theme-toggle-btn:hover {
+    color: var(--color-primary);
+}
+
+/* Animation de transition pour le changement de thème */
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Style spécifique pour les icônes */
+.theme-toggle-btn .fa-moon,
+.theme-toggle-btn .fa-sun {
+    transition: transform 0.5s ease;
+}
+
+.theme-toggle-btn:hover .fa-moon,
+.theme-toggle-btn:hover .fa-sun {
+    transform: rotate(15deg);
+}
+
+/* En mode sombre, on affiche uniquement l'icône du soleil */
+[data-theme="dark"] .dark-icon {
+    display: none;
+}
+
+[data-theme="dark"] .light-icon {
+    display: inline-block;
+}
+
+/* En mode clair, on affiche uniquement l'icône de la lune */
+.dark-icon {
+    display: inline-block;
+}
+
+.light-icon {
+    display: none;
+}

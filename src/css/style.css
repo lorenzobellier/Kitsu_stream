@@ -1,0 +1,894 @@
+:root {
+  /* === Thème clair === */
+  --color-bg: #d9d2d2;
+  --color-text: #000000;
+  --color-primary: #e50914; /* Boutons principaux */
+  --color-primary-hover: #ffffff;
+  --color-on-primary-hover: #e50914;
+
+  --color-secondary: #ff4d4d; /* Boutons alternatifs */
+  --color-secondary-hover: #ff3333;
+
+  --color-link-nav: #000000;
+  --color-link-nav-hover: #0935e5;
+
+  --color-btn-log: #5d76de;
+  --color-btn-hover: #050505;
+
+  --color-input-bg: #f0f0f0;
+  --color-input-border: #ccc;
+  --color-input-text: #000;
+
+  --color-footer-link: #666666;
+  --color-footer-link-hover: #e50914;
+
+  --color-card-bg: #f7f7f7;
+  --color-border: #ddd;
+
+  --color-overlay: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] {
+  /* === Thème sombre === */
+  --color-bg: #141414;
+  --color-text: #ffffff;
+  --color-primary: #e50914;
+  --color-primary-hover: #ffffff;
+  --color-on-primary-hover: #e50914;
+
+  --color-secondary: #ff4d4d;
+  --color-secondary-hover: #ff3333;
+
+  --color-link-nav: #ffffff;
+  --color-link-nav-hover: #ff3333;
+
+  --color-btn-log: #e50914;
+  --color-btn-hover: #ffffff;
+
+  --color-input-bg: #333;
+  --color-input-border: #444;
+  --color-input-border-focus: #666;
+  --color-input-text: #ffffff;
+
+  --color-footer-link: #aaaaaa;
+  --color-footer-link-hover: #ff4d4d;
+
+  --color-card-bg: #1a1a1a;
+  --color-card-hover-bg: #333;
+
+  --color-border: rgba(0, 0, 0, 0.5);
+  --color-overlay: rgba(0, 0, 0, 0.8);
+}
+
+
+/******************* Navbar ****************/
+
+.navbar {
+  background: var(--color-overlay); /* Était: rgba(0, 0, 0, 0.9) */
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+.navbar .d-flex.align-items-center {
+  gap: 0.5rem;
+  margin-left: auto; /* Aligne à droite */
+}
+
+.img_navbar {
+  width: 5rem;
+  height: 5rem;
+}
+
+.H-connecter {
+  color: var(--color-text);
+  background: var(--color-btn-log); /* Était: #e50914 */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.H-connecter:hover {
+  background: var(--color-btn-hover); /* Était: #fff */
+  color: var(--color-btn-log); /* Était: #e50914 */
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link {
+  color: var(--color-link-nav) !important;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--color-link-nav-hover) !important; /* Était: #e50914 */
+}
+
+.btn-login_nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .btn-login_nav {
+    margin-top: 0;
+  }
+  .H-connecter {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1028px) {
+  .btn-login_nav.d-lg-none {
+    display: none !important;
+  }
+
+  .btn-login_nav.d-lg-block {
+    text-align: right;
+  }
+}
+
+/*********************** page index ***************/
+
+/******************* Hero Section ****************/
+
+.body_index {
+  background-color: var(--color-bg); /* Était: #141414 */
+  color: var(--color-text); /* Était: #ffffff */
+  font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.hero-section {
+  min-height: 100vh;
+  background-color: var(--color-bg); /* Était: #141414 */
+}
+
+.feature-card {
+  background-color: var(--color-card-bg); /* Était: #1a1a1a */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  background-color: var(--color-card-hover-bg, var(--color-card-bg)); /* Fallback pour le thème clair */
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: var(--color-secondary); /* Était: #ff4d4d */
+}
+
+.login-btn {
+  background-color: var(--color-secondary); /* Était: #ff4d4d */
+  border: none;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+}
+
+.login-btn:hover, .login-btn:focus {
+  background-color: var(--color-secondary-hover); /* Était: #ff3333 */
+}
+
+.cta-button {
+  background-color: var(--color-secondary); /* Était: #ff4d4d */
+  border: none;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+}
+
+.cta-button:hover, .cta-button:focus {
+  background-color: var(--color-secondary-hover); /* Était: #ff3333 */
+}
+
+.footer-link {
+  color: var(--color-footer-link); /* Était: #aaaaaa */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--color-footer-link-hover); /* Était: #ff4d4d */
+}
+
+/******************* Responsive Design ****************/
+
+@media (max-width: 767px) {
+  /* Intro section */
+  .intro-title {
+    font-size: 36px;
+  }
+
+  .intro-description {
+    font-size: 16px;
+  }
+
+  .btn-login {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+
+  /* Features Section */
+  .features-title {
+    font-size: 28px;
+  }
+
+  .features-list li {
+    font-size: 16px;
+  }
+
+  /* Navbar */
+  .custom-navbar-brand {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Tablettes */
+  .feature-item {
+    /* 2 par 2 en tablette */
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .feature-card {
+    margin: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* PC (3 par 3) */
+  .feature-item {
+    /* 3 par 3 sur les écrans plus larges */
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
+
+/*************** page connexion ***************/
+
+.body_login {
+  font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  background-color: var(--color-bg); /* Était: #141414 */
+  color: var(--color-text); /* Était: white */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 🌟 Conteneur principal */
+.main_login {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: var(--color-overlay); /* Était: rgba(0, 0, 0, 0.85) */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin-top: 5rem;
+}
+
+/* 🎬 Style du titre */
+.main_login h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: var(--color-text); /* Était: #fff */
+}
+
+/* 📜 Style du formulaire */
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 📦 Conteneurs des champs */
+.container-fluid_input {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 🔤 Style des labels */
+.label-login {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  color: var(--color-text); /* Était: #fff */
+}
+
+/* ✏️ Style des champs de saisie */
+.input-login {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background: var(--color-input-bg); /* Était: #333 */
+  border: none;
+  color: var(--color-input-text); /* Était: white */
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-login:focus {
+  border: 1px solid var(--color-primary); /* Était: #e50914 */
+}
+
+/* 🔘 Bouton de connexion */
+.btn-login {
+  width: 10rem;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: var(--color-primary); /* Était: #e50914 */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+.btn-login:hover {
+  background: var(--color-primary-hover); /* Était: #fff */
+  color: var(--color-on-primary-hover); /* Était: #e50914 */
+}
+
+/* ⚠️ Message d'erreur */
+#errorMessage {
+  color: var(--color-primary); /* Était: #e50914 */
+  margin-top: 1.5rem;
+  font-size: 14px;
+}
+
+/* 📱 Responsive : Tablettes et + */
+@media (min-width: 768px) {
+  .main_login {
+    max-width: 500px;
+    padding: 30px;
+  }
+
+  .main_login h1 {
+    font-size: 28px;
+  }
+}
+
+/******************** page actor ******************/
+
+.body_actor {
+  font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  background-color: var(--color-bg); /* Était: #141414 */
+  color: var(--color-text); /* Était: white */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Profil Actor : Alignement */
+.profil_actor {
+  display: grid; /* Utilisation de grid pour le centrage */
+  place-items: center;
+}
+
+/* Container de Profil Actor */
+/* 🌍 Mobile First (par défaut) */
+.container-fluid_actor {
+  width: 95%;
+  margin-top: 75rem;
+  text-align: center;
+}
+
+.name_actor {
+  margin-top: 1.5rem;
+}
+
+/* Image de l'Actor */
+.img_actor {
+  width: 100%;  /* S'adapte à la largeur du conteneur */
+  max-width: 25rem; /* Taille max */
+  height: 30rem;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto; /* Centrage */
+}
+
+/* 🖥️ PC (≥992px) */
+@media (min-width: 992px) {
+  .container-fluid_actor {
+    width: 75%;
+    margin-top: 42rem;
+    text-align: center;
+  }
+
+  .img_actor {
+    width: 25rem; /* Taille fixe */
+    height: 30rem;
+    float: left; /* Aligner à gauche */
+    margin-right: 2rem; /* Espacement avec le texte */
+  }
+}
+
+/* 📊 Tablette (≥768px et ≤991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container-fluid_actor {
+    width: 85%;
+    margin-top: 45rem;
+    text-align: center;
+  }
+
+  .img_actor {
+    width: 20rem;
+    height: 28rem;
+  }
+}
+
+.carousel-item img {
+  width: 100%;
+  object-fit: cover; /* Les images couvrent bien le conteneur sans déformer */
+}
+
+/* Masquer les images qui ne sont pas visibles en fonction de la taille d'écran */
+/* Mobile : une image visible */
+@media (max-width: 767px) {
+  .carousel-item {
+    flex: 0 0 100%; /* Une seule image visible */
+  }
+
+  .carousel-item .col-12:nth-child(n+2) {
+    display: none; /* Masquer les images supplémentaires */
+  }
+}
+
+/* Tablette : deux images visibles */
+@media (min-width: 768px) and (max-width: 991px) {
+  .carousel-item {
+    flex: 0 0 50%; /* Deux images côte à côte */
+  }
+
+  .carousel-item .col-md-6:nth-child(n+3) {
+    display: none; /* Masquer la 3ème et 4ème image */
+  }
+}
+
+/* PC : quatre images visibles */
+@media (min-width: 992px) {
+  .carousel-item {
+    flex: 0 0 25%; /* Quatre images côte à côte */
+  }
+
+  .carousel-item .col-lg-3 {
+    display: block; /* Afficher toutes les images */
+  }
+}
+
+.carousel-control-next, .carousel-control-prev {
+  background-color: rgba(20, 20, 20, 0.8);
+  width: 50px;
+}
+
+/********************** liste acteur *******************/
+
+.body_actors {
+  background-color: var(--color-bg); /* Était: #141414 */
+  color: var(--color-text); /* Était: #fff */
+}
+
+.list_actors {
+  margin-top: 10rem;
+}
+
+.actor-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--color-card-bg); /* Était: #1e1e1e */
+}
+
+.actor-card img {
+  height: 258px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.actor-card .card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+.actor-card .card-body h5 {
+  font-size: 1.2rem;
+}
+
+.actor-card .card-body .btn {
+  margin-top: 10px;
+}
+
+#loadMoreBtn {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  background-color: var(--color-input-bg); /* Était: #333 */
+  color: var(--color-input-text); /* Était: white */
+  border: 1px solid var(--color-input-border); /* Était: #444 */
+}
+
+input[type="text"]:focus {
+  background-color: var(--color-input-bg); /* Était: #444 */
+  color: var(--color-input-text); /* Était: white */
+  border-color: var(--color-input-border-focus, var(--color-input-border)); /* Était: #666 */
+}
+
+.actor-card:hover {
+  background-color: var(--color-card-hover-bg, var(--color-card-bg)); /* Était: #333 */
+}
+
+/******************* page detail film ***************/
+
+.body_det_film {
+  background-color: var(--color-bg); /* Était: #121212 */
+  color: var(--color-text); /* Était: #f1f1f1 */
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.det_film-container {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin-top: 5rem;
+}
+
+.det_film-poster {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgb(255, 255, 255);
+  object-fit: cover;
+}
+
+.det_film-btn-play {
+  text-align: center;
+  width: auto;
+  height: 4rem;
+  font-size: 1.5rem;
+  color: white;
+  background: var(--color-primary); /* Était: #e50914 */
+  padding: 12px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.det_film-btn-play:hover {
+  background: var(--color-primary-hover); /* Était: #fff */
+  color: var(--color-on-primary-hover); /* Était: #e50914 */
+}
+
+.det_f-title {
+  font-size: 2.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-text); /* Était: #fff */
+}
+
+.det_f-synop {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  color: var(--color-text); /* Était: #fff */
+}
+
+.det_f-descrip {
+  font-size: 1rem;
+  color: var(--color-text); /* Était: #ccc */
+  opacity: 0.8; /* Pour garder l'effet plus léger */
+  margin-bottom: 1.5rem;
+}
+
+.det_film-info-label {
+  font-weight: 600;
+  color: var(--color-text); /* Était: #ddd */
+  opacity: 0.9; /* Pour garder l'effet plus léger */
+}
+
+.modal-content {
+  background-color: var(--color-bg); /* Était: #000 */
+}
+
+#det_film-trailer {
+  border: none;
+}
+
+.det_film-actor-carousel {
+  padding-top: 1rem;
+  display: flex;
+  overflow-x: scroll;
+  gap: 1rem;
+  -ms-overflow-style: none;  /* Cache la scrollbar pour les navigateurs Windows */
+  scrollbar-width: none;
+}
+
+.det_film-actor-card {
+  min-width: 120px;
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.det_film-actor-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.det_film-actor-card:hover img {
+  transform: scale(1.05);
+}
+
+.det_film-actor-card p {
+  color: var(--color-text); /* Était: white */
+  font-size: 14px;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .det_film-poster {
+    width: 70%;
+  }
+
+  .det_film-container {
+    padding: 3rem 3rem;
+  }
+
+  .det_f-title {
+    font-size: 2.5rem;
+  }
+
+  .det_f-synop {
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .det_film-actor-carousel {
+    justify-content: flex-start;
+  }
+}
+
+/********************** page détail serie *****************/
+
+.body_det_serie {
+  background-color: var(--color-bg); /* Était: #121212 */
+  color: var(--color-text); /* Était: #f1f1f1 */
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.det_serie-container {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 5rem;
+}
+
+.det_serie-poster {
+  width: 70%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgb(255, 255, 255);
+}
+
+.det_serie-btn-play {
+  text-align: center;
+  width: auto;
+  height: 4rem;
+  font-size: 1.5rem;
+  color: white;
+  background: var(--color-primary); /* Était: #e50914 */
+  padding: 12px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.det_serie-btn-play:hover {
+  background: var(--color-primary-hover); /* Était: #fff */
+  color: var(--color-on-primary-hover); /* Était: #e50914 */
+}
+
+.det_serie-title {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--color-text); /* Était: #fff */
+}
+
+.det_serie-synop {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  color: var(--color-text); /* Était: #fff */
+}
+
+.det_serie-descrip {
+  font-size: 1rem;
+  color: var(--color-text); /* Était: #ccc */
+  opacity: 0.8; /* Pour garder l'effet plus léger */
+  margin-bottom: 1.5rem;
+}
+
+.det_serie-info-label {
+  font-weight: 600;
+  color: var(--color-text); /* Était: #ddd */
+  opacity: 0.9; /* Pour garder l'effet plus léger */
+}
+
+.modal-content {
+  background-color: var(--color-bg); /* Était: #000 */
+}
+
+#det_serie-trailer {
+  border: none;
+}
+
+.det_serie-actor-carousel {
+  padding-top: 1rem;
+}
+
+.det_serie-actor-carousel::-webkit-scrollbar {
+  display: none;
+}
+.det_serie-actor-carousel {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.det_serie-actor-card {
+  min-width: 120px;
+  text-align: center;
+  flex: 0 0 auto;
+}
+.det_serie-actor-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.det_serie-actor-card:hover img {
+  transform: scale(1.05);
+}
+.det_serie-actor-card p {
+  color: var(--color-text); /* Était: white */
+  font-size: 14px;
+  margin-top: 0.5rem;
+}
+
+/* Styles pour les saisons */
+.det_serie-season {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  background-color: var(--color-card-bg); /* Était: #333 */
+  color: var(--color-text); /* Était: white */
+  text-align: center;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.det_serie-season:hover {
+  transform: scale(1.1);
+  background-color: var(--color-card-hover-bg, var(--color-card-bg)); /* Était: non spécifié */
+}
+
+.det_serie-season-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.det_serie-episode-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.det_serie-episode-list li {
+  margin-bottom: 5px;
+}
+
+.det_serie-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-overlay); /* Était: rgba(0, 0, 0, 0.8) */
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text); /* Était: white */
+  padding: 20px;
+}
+
+.det_serie-overlay.active {
+  display: flex;
+}
+
+.det_serie-overlay-content {
+  background-color: var(--color-card-bg); /* Était: #222 */
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.det_serie-overlay-header {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.det_serie-close-overlay {
+  color: var(--color-text); /* Était: white */
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Style pour le bouton de changement de thème */
+.theme-toggle-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  padding: 8px;
+}
+
+.theme-toggle-btn:hover {
+  color: var(--color-primary);
+}
+
+/* Animation de transition pour le changement de thème */
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Style spécifique pour les icônes */
+.theme-toggle-btn .fa-moon,
+.theme-toggle-btn .fa-sun {
+  transition: transform 0.5s ease;
+}
+
+.theme-toggle-btn:hover .fa-moon,
+.theme-toggle-btn:hover .fa-sun {
+  transform: rotate(15deg);
+}
+
+/* En mode sombre, on affiche uniquement l'icône du soleil */
+[data-theme="dark"] .dark-icon {
+  display: none;
+}
+
+[data-theme="dark"] .light-icon {
+  display: inline-block;
+}
+
+/* En mode clair, on affiche uniquement l'icône de la lune */
+.dark-icon {
+  display: inline-block;
+}
+
+.light-icon {
+  display: none;
+}
